@@ -25,7 +25,7 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.album (
-    album_id integer NOT NULL,
+    album_id integer NOT NULL UNIQUE,
     musician_id integer,
     album_title text,
     release_date date
@@ -39,7 +39,7 @@ ALTER TABLE public.album OWNER TO postgres;
 --
 
 CREATE TABLE public.musician (
-    musician_id integer NOT NULL,
+    musician_id integer NOT NULL UNIQUE,
     name text,
     debut_date date
 );
@@ -52,7 +52,7 @@ ALTER TABLE public.musician OWNER TO postgres;
 --
 
 CREATE TABLE public.sales (
-    sales_id integer NOT NULL,
+    sales_id integer NOT NULL UNIQUE,
     album_id integer,
     itunes integer,
     spotify integer,
@@ -68,7 +68,7 @@ ALTER TABLE public.sales OWNER TO postgres;
 --
 
 CREATE TABLE public.song (
-    song_id integer NOT NULL,
+    song_id integer NOT NULL UNIQUE,
     album_id integer,
     song_title text,
     genre text,
