@@ -7,6 +7,9 @@ To access the database on your local machine, please download the `musicdb.psql`
 
 Enter your password that was setup during the Postgre SQL installation on prompt.
 
+*Alternatively:*
+Please reference the .txt file written up by teammate Zixin for all psql queries made.
+
 ---
 
 *Group members:*  
