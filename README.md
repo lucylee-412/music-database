@@ -24,8 +24,8 @@ Please reference the .txt file written up by teammate Zixin for all psql queries
 ## Changelog
 
 *January 19, 2022*
-* Tested out inner join queries to join 2-3-4 tables. See [issue #3](/../../issues/3).
-* Populated database with 4 tuples per table, with matching IDs for connection. See [issue #2](/../../issues/2).
+* Tested out inner join queries to join 2-3-4 tables. See [issue #9](/../../issues/9).
+* Populated database with 4 tuples per table, with matching IDs for connection. See [issue #3](/../../issues/3).
 
 *January 18 ~ 19, 2022*
 * Created the PostgreSQL database following our Figma diagram. See [issue #1](/../../issues/1).
