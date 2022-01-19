@@ -56,6 +56,7 @@ CREATE TABLE public.sales (
     album_id integer,
     itunes integer,
     spotify integer,
+    physical integer,
     applemusic integer
 );
 
@@ -90,6 +91,10 @@ COPY public.album (album_id, musician_id, album_title, release_date) FROM stdin;
 --
 
 COPY public.musician (musician_id, name, debut_date) FROM stdin;
+1	SEVENTEEN	2015-05-26
+2	BTS	2013-06-12
+3	fromis_9	2018-01-24
+4	PRISTIN	2017-03-21
 \.
 
 
@@ -97,7 +102,11 @@ COPY public.musician (musician_id, name, debut_date) FROM stdin;
 -- Data for Name: sales; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.sales (sales_id, album_id, itunes, spotify, applemusic) FROM stdin;
+COPY public.sales (sales_id, album_id, itunes, spotify, physical, applemusic) FROM stdin;
+1	1	\N	\N	1766524	347507
+2	2	\N	\N	6380000	\N
+3	3	\N	\N	58032	\N
+4	4	\N	\N	43300	\N
 \.
 
 
@@ -106,6 +115,10 @@ COPY public.sales (sales_id, album_id, itunes, spotify, applemusic) FROM stdin;
 --
 
 COPY public.song (song_id, album_id, song_title, genre, length) FROM stdin;
+1	1	Rock with you	Rock	3.63
+2	2	ON	Trap	4.12
+3	3	WE GO	EDM	2.93
+4	4	WEE WOO	EDM	3.2
 \.
 
 
