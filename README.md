@@ -12,5 +12,9 @@
 
 ## Changelog
 
+*January 19, 2022*
+* Tested out inner join queries to join 2-3-4 tables.
+* Populated database with 4 tuples per table, with matching IDs for connection.
+
 *January 18 ~ 19, 2022*
 * Created the PostgreSQL database following our Figma diagram. See [issue #1](/../../issues/1).
