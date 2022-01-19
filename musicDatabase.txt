@@ -1,0 +1,21 @@
+//create database
+CREATE DATABASE Music;
+
+//change database to music
+\c music;
+
+//create table
+create table musician(musicianId int primary key, musicianName text, deb
+utDate date);
+create table album(albumId int primary key ,musicianId int, title text,
+releaseDate date);
+create table song(songId int primary key ,albumId int, title text, genre text, length text);
+create table statistic(statId int primary key ,albumId int, itune text,
+spotify text, appleMusic text);
+
+
+//retrieve data from table
+select * from musician;
+select * from album;
+select * from song;
+select * from statistic;
