@@ -1,6 +1,8 @@
 # Creating a database using PostgreSQL
 *2022 Brooklyn College TTP - Assignment #10*
 
+## How to view the database
+
 To access the database on your local machine, please download the `musicdb.psql` file, and run the following command in your terminal with a PATH to the Postgre SQL bin:
 
 `psql -U postgres musicdatabase < musicdb.psql`
@@ -12,7 +14,7 @@ Please reference the .txt file written up by teammate Zixin for all psql queries
 
 ---
 
-*Group members:*  
+## Group members
 * [Yahia Elhag](https://github.com/YahiaE)
 * [Lucy Lee](https://github.com/lucylee-412)
 * [Zixin Zou](https://github.com/zxin1007)
