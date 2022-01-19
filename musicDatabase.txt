@@ -5,17 +5,43 @@ CREATE DATABASE Music;
 \c music;
 
 //create table
-create table musician(musicianId int primary key, musicianName text, deb
-utDate date);
-create table album(albumId int primary key ,musicianId int, title text,
+create table musician(musicianId int primary key, musicianName varchar(30), debutDate date);
+create table album(albumId int primary key ,musicianId int, title varchar(30),
 releaseDate date);
-create table song(songId int primary key ,albumId int, title text, genre text, length text);
-create table statistic(statId int primary key ,albumId int, itune text,
-spotify text, appleMusic text);
+create table song(songId int primary key ,albumId int, title varchar(30), genre varchar(30), length real);
+create table sale(saleid int primary key ,albumId int, itune int, spotify int, appleMusic int);
 
 
 //retrieve data from table
 select * from musician;
 select * from album;
 select * from song;
-select * from statistic;
+select * from sale;
+
+
+//insert
+insert into musician values (1,'SEVENTEEN','2015-05-26');
+insert into musician values (2,'BTS','2013-06-12');
+insert into musician values (3,'fromis_9','2018-01-24');
+insert into musician values (4,'PRISTIN','2017-03-21');
+
+insert into album values (1,1,'Attacca','2021-10-22');
+insert into album values (2,2,'Map of the Soul: 7','2020-02-21');
+insert into album values (3,3,'9 Way Ticket','2021-05-17');
+insert into album values (4,4,'HI! PRISTIN','2017-03-21');
+
+insert into song values (1,1,'Rock with you','Rock',3.63);
+insert into song values (2,2,'ON','Trap',4.12);
+insert into song values (3,3,'WE GO','EDM',2.93);
+insert into song values (4,4,'WEE WOO','EDM',3.2);
+
+insert into sale (saleid, albumId, spotify, appleMusic) values (1,1,1766524,347507);
+insert into sale (saleid, albumId, spotify) values (2,2,6380000);
+insert into sale (saleid, albumId, spotify)  values (3,3,58032);
+insert into sale (saleid, albumId, spotify)  values (4,4,43300);
+
+//joins three tables
+select * from musician inner join album on musician.musicianid = album.musicianid inner join song on album.albumid = song.albumid;
+
+//joins all four tables
+select * from musician inner join album on musician.musicianid = album.musicianid inner join song on album.albumid = song.albumid inner join sale on song.albumid= sale.albumid;
