@@ -12,5 +12,5 @@
 
 ## Changelog
 
-*January 18, 2022*
-* 
+*January 18 ~ 19, 2022*
+* Created the PostgreSQL database following our Figma diagram. See [issue #1](/../../issues/1).
