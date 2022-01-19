@@ -82,6 +82,10 @@ ALTER TABLE public.song OWNER TO postgres;
 --
 
 COPY public.album (album_id, musician_id, album_title, release_date) FROM stdin;
+1	1	Attacca	2021-10-22
+2	2	Map of the Soul: 7	2020-02-21
+3	3	9 Way Ticket	2021-05-17
+4	4	HI! PRISTIN	2017-03-21
 \.
 
 
